@@ -1,0 +1,509 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --primary-color: #fff;
+  --primary-color1: #f0eee6;
+
+  --background-color-main: #424651;
+  --background-color-header: #ffe6e6;
+
+  --font-family-main: "Roboto", sans-serif;
+  --font-family-secondary: "Poppins", sans-serif;
+
+  --primary-line-height: 1.5em;
+  --secondary-line-height: 3em;
+}
+
+.page {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#scroll--half {
+  position: sticky;
+  position: -webkit-sticky;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+    ============= 
+    FONT FAMILY
+    =============
+*/
+body {
+  font-family: var(--font-family-main);
+  background-color: var(--background-color-main);
+}
+
+.tribute--name {
+  font-family: var(--font-family-secondary);
+  font-weight: 600;
+  color: var(--primary-color1);
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-size: 7vw;
+}
+
+.tribute--name:hover {
+  text-decoration: none;
+}
+
+/* ------------- */
+
+.container {
+  margin: 1.5em;
+  padding: 1em;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.container--header {
+  max-width: 100%;
+  max-height: 100%;
+  background-color: black;
+}
+
+/* 
+    ========
+    Text styling (using span)
+    ========
+*/
+.style-text-basic {
+  font-weight: 600;
+}
+
+/* 
+    ===========
+    LINKS
+    ===========    
+*/
+a {
+  text-decoration: none;
+  /* !color: white; */
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ================
+    HEADER
+   ================
+*/
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  padding-top: 2.8em;
+  padding-bottom: 2.8em;
+  background: var(--background-color-header);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.nav--item {
+  margin: 1em;
+  color: black;
+  font-size: 20px;
+}
+
+.nav--item:hover {
+  color: red;
+  text-decoration: none;
+}
+
+.flowers--header {
+  color: pink;
+}
+
+cite {
+  font-family: var(--font-family-secondary);
+  padding-top: 2em;
+}
+
+/* 
+    ==============
+        MAIN
+    ==============
+*/
+
+.main {
+  margin-top: 5em;
+  height: 100vh;
+  color: var(--primary-color1);
+  border-radius: 3em;
+  border-top-right-radius: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main p {
+  margin-top: 0.5em;
+}
+
+/* 
+    =============
+     IMAGE
+    =============
+*/
+
+.image-div {
+  display: flex;
+  margin-block: 3em;
+  margin-inline: 1em;
+  align-items: center;
+  max-height: 100%;
+}
+
+.image {
+  position: relative;
+  float: left;
+  margin-inline-end: 3em;
+  max-height: 80%;
+  max-width: 80%;
+  border-radius: 10px;
+}
+
+img {
+  object-fit: contain;
+}
+
+.image-caption {
+  justify-content: center;
+  margin-block: 1em;
+  font-size: 1.5em;
+  line-height: var(--primary-line-height);
+}
+
+/* 
+    ==============
+    Basic Media queries for images
+    ==============
+*/
+
+@media screen and (max-width: 750px) {
+  .image-div {
+    flex-direction: column;
+  }
+
+  .image-caption {
+    font-size: 80%;
+    font-weight: 1000;
+    margin-top: 50px;
+  }
+
+  .image {
+    width: 40%;
+  }
+}
+
+/*  
+    ==============
+        Life-Events & Books
+    ==============
+ */
+
+.events {
+  background-color: #b2b1b9;
+  margin-inline: 0;
+  margin-top: 3em;
+  height: 100%;
+}
+
+.life-events {
+  padding-block: 3.5em;
+  line-height: var(--secondary-line-height);
+}
+
+.life-events h4 {
+  font-size: 3em;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .life-events h4 {
+    font-size: 1.5em;
+    text-decoration: underline;
+  }
+}
+
+.list-group {
+  display: flex;
+  flex-direction: row;
+  background-color: #eeeeee;
+  border-radius: 1em;
+  margin-block: 1.5em;
+  padding-block: 2em;
+  padding-inline-end: 1.5em;
+}
+
+.list-group--right {
+  border-radius: 1em;
+  margin-block: 1.5em;
+  padding-block: 2em;
+  padding-inline: 2em;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.list-image {
+  padding: 10px;
+  border-radius: 20px;
+  width: 20vw;
+  height: 30vw;
+}
+
+.list-content {
+  align-self: center;
+  font-size: 1.5em;
+}
+
+.event-date {
+  font-weight: 600;
+  color: black;
+  display: block;
+  font-family: var(--font-family-secondary);
+}
+
+.image-group {
+  width: 50%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  margin-inline: 2em;
+  border-radius: 10px;
+}
+
+.image-text {
+  text-align: center;
+  padding: 10px 20px;
+  line-height: 1em;
+  font-size: 1em;
+}
+
+/* 
+=========
+FOR BOOKS
+=========
+*/
+
+.books {
+  padding: 0 6px;
+  max-width: 100%;
+  background-color: #373a40;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.grid > figure {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.grid figure img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.book {
+  margin: 2.5em;
+  padding: 2em;
+}
+
+.book > figcaption {
+  padding: 15px;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+}
+
+.book:hover {
+  border: 1px solid #777;
+}
+
+.tribute-name--books {
+  font-size: 5vw;
+  cursor: initial;
+  text-align: center;
+  padding-top: 2em;
+}
+
+@media screen and (max-width: 1085px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============= */
+
+/* ================
+    MEDIA QUERIES FOR LIFE EVENTS
+===============
+
+*/
+
+@media screen and (max-width: 1000px) {
+  .list-group {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 2em;
+  }
+
+  .list-group--right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-group {
+    align-self: center;
+  }
+
+  .list-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    align-self: center;
+  }
+
+  .event-date {
+    text-align: center;
+  }
+}
+
+/* ============
+    Adjusting the background around the images 
+============= */
+
+@media screen and (max-width: 650px) {
+  .image-group {
+    margin-bottom: 0;
+    margin-inline: 0;
+    border-radius: 10px;
+  }
+
+  .list-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .list-content {
+    padding: 0;
+    font-size: 80%;
+  }
+}
+
+/* 
+    =================
+    FOOTER
+    =================
+
+*/
+
+footer {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* =======
+QUOTES
+========== */
+.quotes {
+  background-color: #2d2f36;
+  max-width: 100%;
+  height: 30em;
+  text-align: center;
+}
+
+.quotes--flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.quote {
+  color: black;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.quote-wrap {
+  max-width: 50%;
+  height: 10em;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  margin-inline: 2em;
+  border-radius: 10px;
+  padding: 2em;
+  display: table;
+}
+@media screen and (max-width: 650px) {
+  .quote {
+    font-size: 2vw;
+    font-weight: 500;
+  }
+
+  .quotes--flex {
+    flex-direction: column;
+  }
+}
+
+.tribute--quotes {
+  font-family: var(--font-family-secondary);
+  font-weight: 600;
+  color: var(--primary-color1);
+  cursor: pointer;
+  padding-block: 0.6em;
+  flex-wrap: wrap-reverse;
+  font-size: 7vw;
+}
+
+@media screen and (max-width: 400px) {
+  .quote {
+    font-size: 0.7em;
+  }
+
+  .quote-wrap {
+    margin-top: 1.5em;
+    max-width: 100%;
+    max-height: 10em;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 13px;
+    display: table;
+  }
+}
